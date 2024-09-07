@@ -1,44 +1,22 @@
 #include <stdio.h>
 #include <assert.h>
+//char temperatureStaus[15]="Not InRange";
+int parameterInRange(float parameter, float lowerLimit, float higherLimit)
+{
+return parameter >= lowerLimit && parameter <= higherLimit;
+}
 
 int temperatureIsOk(float temperature) 
 {
-if (temperature>=0&&temperature<=45)
-{
-   printf("Temperature within range!\n");
-   return 1;
-}
-else
-{
-   printf("Temperature out of range!\n");
-   return 0;
-}
+    return parameterInRange(temperature, 0, 45);
 }
 int socIsOk(float soc)
 {
-if (soc>=20 && soc<=80)
-{
-    printf("State of Charge in range!\n");
-   return 1;
-}
-else
-{
-    printf("State of Charge out of range!\n");
-   return 0;
-}
+    return parameterInRange(soc, 20, 80);
 }
 int chargeRateIsOk(float chargeRate)
 {
-if (chargeRate<=0.8)
-{
-   printf("Charge Rate in range!\n");
-   return 1;
-}
-else
-{
-    printf("Charge Rate out of range!\n");
-   return 0;
-}
+   return parameterInRange(chargeRate, 0.5, 80);
 }
 
 int batteryIsOk(float temperature, float soc, float chargeRate)
