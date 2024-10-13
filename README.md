@@ -59,3 +59,8 @@ Shorten the Semantic distance
 - Functional to express relation between input and output
 - Object oriented to encapsulate state with actions
 - Apect oriented to capture repeating aspects
+
+My Experience
+- I took some time to understand and connect the new requirment with the existing code
+- Tried many menthods to do both the functionalities without affecting eachother
+- Atlast found after few more understanding, i ccame to this solution
